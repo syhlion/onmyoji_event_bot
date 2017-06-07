@@ -389,11 +389,11 @@ func main() {
 	log.Println("Bot Start")
 	gocron.ChangeLoc(location)
 	//鬥技
-	gocron.Every(1).Day().At("12:00").Do(Event, bot, EVENT_S1)
-	gocron.Every(1).Day().At("21:00").Do(Event, bot, EVENT_S1)
+	gocron.Every(1).Days().At("12:00").Do(Event, bot, EVENT_S1)
+	gocron.Every(1).Days().At("21:00").Do(Event, bot, EVENT_S1)
 	//妖怪退治
-	gocron.Every(1).Day().At("13:00").Do(Event, bot, EVENT_S2)
-	gocron.Every(1).Day().At("20:00").Do(Event, bot, EVENT_S2)
+	gocron.Every(1).Days().At("13:00").Do(Event, bot, EVENT_S2)
+	gocron.Every(1).Days().At("20:00").Do(Event, bot, EVENT_S2)
 	//鬼王來襲
 	gocron.Every(1).Monday().At("19:00").Do(Event, bot, EVENT_S3)
 	gocron.Every(1).Tuesday().At("19:00").Do(Event, bot, EVENT_S3)
