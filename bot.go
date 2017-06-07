@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jasonlvhit/gocron"
 	_ "github.com/mattn/go-sqlite3"
+	"github.com/syhlion/gocron"
 	"github.com/tucnak/telebot"
 )
 
