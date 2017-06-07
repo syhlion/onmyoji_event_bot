@@ -22,12 +22,12 @@ var (
 		EVENT_S1: "鬥技",
 		EVENT_S2: "妖怪退治",
 		EVENT_S3: "鬼王來襲",
-		EVENT_S4: "陰界之王",
+		EVENT_S4: "陰界之門",
 		EVENT_S5: "協同鬥技",
 		EVENT_U1: "鬥技",
 		EVENT_U2: "妖怪退治",
 		EVENT_U3: "鬼王來襲",
-		EVENT_U4: "陰界之王",
+		EVENT_U4: "陰界之門",
 		EVENT_U5: "協同鬥技",
 	}
 )
@@ -388,18 +388,23 @@ func main() {
 	}
 	log.Println("Bot Start")
 	gocron.ChangeLoc(location)
+	//鬥技
 	gocron.Every(1).Day().At("12:00").Do(Event, bot, EVENT_S1)
 	gocron.Every(1).Day().At("21:00").Do(Event, bot, EVENT_S1)
+	//妖怪退治
 	gocron.Every(1).Day().At("13:00").Do(Event, bot, EVENT_S2)
 	gocron.Every(1).Day().At("20:00").Do(Event, bot, EVENT_S2)
+	//鬼王來襲
 	gocron.Every(1).Monday().At("19:00").Do(Event, bot, EVENT_S3)
 	gocron.Every(1).Tuesday().At("19:00").Do(Event, bot, EVENT_S3)
 	gocron.Every(1).Thursday().At("19:00").Do(Event, bot, EVENT_S3)
 	gocron.Every(1).Wednesday().At("19:00").Do(Event, bot, EVENT_S3)
+	//陰界之門
 	gocron.Every(1).Friday().At("19:00").Do(Event, bot, EVENT_S4)
 	gocron.Every(1).Saturday().At("19:00").Do(Event, bot, EVENT_S4)
 	gocron.Every(1).Sunday().At("19:00").Do(Event, bot, EVENT_S4)
-	gocron.Every(1).Saturday().At("13:00").Do(Event, bot, EVENT_S5)
+	//協同鬥技
+	gocron.Every(1).Saturday().At("14:00").Do(Event, bot, EVENT_S5)
 	gocron.Every(1).Sunday().At("14:00").Do(Event, bot, EVENT_S5)
 	go func() {
 		<-gocron.Start()
