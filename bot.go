@@ -159,7 +159,11 @@ func init() {
 		panic(err)
 	}
 	db = d
-	location, _ = time.LoadLocation("Asia/Taipei")
+	location, err = time.LoadLocation("Asia/Taipei")
+	if err != nil {
+		log.Println(err)
+		return
+	}
 	ONMYOJI_EVENT_BOT_TOKEN = os.Getenv("ONMYOJI_EVENT_BOT_TOKEN")
 }
 
