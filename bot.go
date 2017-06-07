@@ -244,7 +244,7 @@ func callbacks(bot *telebot.Bot) {
 
 func messages(bot *telebot.Bot) {
 	for message := range bot.Messages {
-		log.Println(message.Sender.ID, message.Sender.Username, message.Text)
+		log.Println(message.ID, message.Sender.ID, message.Sender.Username, message.Text)
 		switch message.Text {
 		case "/subscribe":
 			bot.SendMessage(message.Chat, "請選擇要註冊的事件", &telebot.SendOptions{
