@@ -1,0 +1,14 @@
+hash: d6892f589fd7b98a66a207808a997b8bd02caa810e39e62452208c324c9a9e06
+updated: 2017-06-06T12:04:38.942499216+08:00
+imports:
+- name: github.com/jasonlvhit/gocron
+  version: 42a5804d37aa0b9239b265e894a16b8edbf52d54
+- name: github.com/mattn/go-sqlite3
+  version: ca5e3819723d8eeaf170ad510e7da1d6d2e94a08
+- name: github.com/tucnak/telebot
+  version: 40c91ee0b4c635ca2f520c54617306092cabb845
+- name: golang.org/x/net
+  version: 59a0b19b5533c7977ddeb86b017bf507ed407b12
+  subpackages:
+  - context
+testImports: []
