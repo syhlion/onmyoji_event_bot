@@ -387,6 +387,7 @@ func main() {
 		return
 	}
 	log.Println("Bot Start")
+	gocron.ChangeLoc(location)
 	gocron.Every(1).Day().At("12:00").Do(Event, bot, EVENT_S1)
 	gocron.Every(1).Day().At("21:00").Do(Event, bot, EVENT_S1)
 	gocron.Every(1).Day().At("13:00").Do(Event, bot, EVENT_S2)
