@@ -342,13 +342,13 @@ func messages(bot *telebot.Bot) {
 					},
 				},
 			}
-			text := "歡迎使用陰陽師事件通知機器人\n\n問題回報\nhttps://github.com/syhlion/onmyoji_event_bot/issues\n\n"
+			text := "歡迎使用陰陽師（台服）事件通知機器人\n\n問題回報\nhttps://github.com/syhlion/onmyoji_event_bot/issues\n\n"
 			bot.SendMessage(message.Chat, text, option)
 		case "/help":
 			option := &telebot.SendOptions{
 				DisableWebPagePreview: true,
 			}
-			text := "歡迎使用陰陽師事件通知機器人\n\n\n問題回報\nhttps://github.com/syhlion/onmyoji_event_bot/issues\n\n命令列表\n/subscribe - 註冊遊戲事件\n/unsubscribe - 取消遊戲事件\n/list - 列出目前所有訂閱事件"
+			text := "歡迎使用陰陽師（台服）事件通知機器人\n\n\n問題回報\nhttps://github.com/syhlion/onmyoji_event_bot/issues\n\n命令列表\n/subscribe - 註冊遊戲事件\n/unsubscribe - 取消遊戲事件\n/list - 列出目前所有訂閱事件"
 			bot.SendMessage(message.Chat, text, option)
 		case "/list":
 			msg := ListCommand(message.Sender.ID)
