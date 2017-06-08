@@ -58,7 +58,7 @@ func RegisterCommand(id int, event string) (msg string) {
 			if strings.Contains(err.Error(), "UNIQUE") {
 				msg = fmt.Sprintf("\n您已註冊 [%s] 過。", dict_tw[event])
 			} else {
-				msg = "\n這是陰陽師事件機器人，目前發生錯誤，請再註冊一次"
+				msg = "\n目前發生錯誤，請再註冊一次"
 			}
 		}
 	}()
